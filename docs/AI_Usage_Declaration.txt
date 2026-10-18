@@ -1,0 +1,17 @@
+AI USAGE DECLARATION
+
+Project: VangtiChai Android Application
+
+AI Tool Used: ChatGPT (OpenAI)
+
+AI assistance was used for:
+- Understanding the assignment requirements.
+- Generating, writing, and explaining Kotlin and XML code.
+- Developing the numeric keypad and Taka change calculation.
+- Creating portrait and landscape layouts.
+- Supporting different phone and tablet screen sizes.
+- Debugging Android Studio errors.
+- Testing the application on Pixel XL, Nexus 10, and Pixel 6 emulators.
+- Preparing documentation and GitHub submission.
+
+AI-generated guidance and code were used during development. The application was built and tested in Android Studio.

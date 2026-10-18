@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="zero_size">0dp</dimen>
+
+    <dimen name="screen_padding">12dp</dimen>
+    <dimen name="section_gap">14dp</dimen>
+
+    <dimen name="amount_text_size">20sp</dimen>
+    <dimen name="amount_bottom_gap">24dp</dimen>
+
+    <dimen name="note_text_size">16sp</dimen>
+    <dimen name="note_row_height">34dp</dimen>
+    <dimen name="notes_width">110dp</dimen>
+
+    <dimen name="land_notes_width">230dp</dimen>
+
+    <dimen name="keypad_width">200dp</dimen>
+    <dimen name="key_height">54dp</dimen>
+    <dimen name="key_text_size">16sp</dimen>
+    <dimen name="key_spacing">2dp</dimen>
+
+</resources>

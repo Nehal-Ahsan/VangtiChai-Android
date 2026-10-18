@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding"
+    tools:context=".MainActivity">
+
+    <!-- Amount shown at the top -->
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/taka_empty"
+        android:textSize="@dimen/amount_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main body: note list on left, keypad on right -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/amount_bottom_gap"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvAmount">
+
+        <!-- LEFT SIDE: Taka note counts -->
+        <LinearLayout
+            android:layout_width="@dimen/notes_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv500"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_500_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv100"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_100_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv50"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_50_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv20"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_20_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_10_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_5_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_2_initial"
+                android:textSize="@dimen/note_text_size" />
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/note_row_height"
+                android:gravity="center_vertical"
+                android:text="@string/note_1_initial"
+                android:textSize="@dimen/note_text_size" />
+
+        </LinearLayout>
+
+        <!-- Gap between note list and keypad -->
+        <Space
+            android:layout_width="@dimen/section_gap"
+            android:layout_height="wrap_content" />
+
+        <!-- RIGHT SIDE: Numeric keypad -->
+        <LinearLayout
+            android:layout_width="@dimen/keypad_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Row 1: 1 2 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_1"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_2"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_3"
+                    android:textSize="@dimen/key_text_size" />
+
+            </LinearLayout>
+
+            <!-- Row 2: 4 5 6 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_4"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_5"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_6"
+                    android:textSize="@dimen/key_text_size" />
+
+            </LinearLayout>
+
+            <!-- Row 3: 7 8 9 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_7"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_8"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_9"
+                    android:textSize="@dimen/key_text_size" />
+
+            </LinearLayout>
+
+            <!-- Row 4: 0 CLEAR -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn0"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="1"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/digit_0"
+                    android:textSize="@dimen/key_text_size" />
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="@dimen/zero_size"
+                    android:layout_height="@dimen/key_height"
+                    android:layout_margin="@dimen/key_spacing"
+                    android:layout_weight="2"
+                    android:minWidth="@dimen/zero_size"
+                    android:text="@string/clear"
+                    android:textSize="@dimen/key_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
